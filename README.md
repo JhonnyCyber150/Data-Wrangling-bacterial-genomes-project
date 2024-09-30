@@ -1,17 +1,24 @@
-# bacterial-genomes-project
+# Data Wrangling - Bacterial-genomes-project
 
-To downloads the file go to the website (https://www.ncbi.nlm.nih.gov/datasets/)
-Follow the steps
 
-selecionamos genomes
-click bacteria y sale com 2.1 millions
-click en total 
-luego set columns y colocamos las 4 opciones
-luego invertimos el date (click sobre release) y seleccionamos los 14 que son up 2001
+To downloads the file go to the website https://www.ncbi.nlm.nih.gov/datasets/ 
 
-en downland selecciona el dowland package (peas 18 mb)
+### Follow the steps
+
+Select genomes 
+Click bacteria and there are about 2.1 millions 
+Click total
+Set columns and choose (GC percentage, Contig N50,
+Scaffold count, genome size)
+Sort the date and select the 14 genomes release up to 2001
+Download 
+#### downlad package (~18 mb)
+
+## Create a README.md file
+Go to link https://github.com/ and create an acount  and an repository 
 
 # Question 2
+## Copy the files to your home directory on IBEX and uncompress
 scp C:\Users\USUARIO\Downloads\bacterial_dataset.zip caichoj@ilogin.ibex.kaust.edu.sa:~/  
 
 I should enter the passowrd and it was copied
