@@ -8,14 +8,14 @@ To downloads the file go to the website https://www.ncbi.nlm.nih.gov/datasets/
 1. Select genomes 
 2. Click bacteria and there are about 2.1 millions 
 3. Click total
-4. Set columns and choose (GC percentage, Contig N50,
-5. Scaffold count, genome size)
-6. Sort the date and select the 14 genomes release up to 2001
+4. Set columns and choose (GC percentage, Contig N50,Scaffold count, genome size)
+6. Sort by date and select the 14 genomes release up to 2001
 7. Download
 #### downlad package (~18 mb)
 
 ## Create a README.md file
-Go to link https://github.com/ and create an acount  and an repository 
+1. Go to link https://github.com/ 
+2. Create an acount and new repository 
 
 # Question 2
 ## Copy the files to your home directory on IBEX and uncompress
