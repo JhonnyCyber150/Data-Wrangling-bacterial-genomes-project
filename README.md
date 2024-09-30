@@ -54,7 +54,7 @@ Notice bacterial_dataset.zip has been added
 [caichoj@login509-02-r ~]$ unzip bacterial_dataset.zip
 ```
 
-SMS during the 
+During the unzip
 
 ```bash 
 
@@ -94,10 +94,13 @@ Archive:  bacterial_dataset.zip
   inflating: ncbi_dataset/data/dataset_catalog.json
   inflating: md5sum.txt
 
+```
+
 ls -l
 
-## appear new files in my home directory like ncbi_dataset and README.md, md5sum.text
+appear new files in my home directory like ncbi_dataset and README.md, md5sum.text
 
+```bash 
 rw-r--r--  1 caichoj g-caichoj 16768029 Sep 23 03:14 bacterial_dataset.zip
 -rw-r--r--  1 caichoj g-caichoj      111 Sep 22 12:10 cpu_ibex.slurm
 -rw-r--r--  1 caichoj g-caichoj     1041 Sep 17 17:15 E_coli_first10.fna
@@ -110,14 +113,26 @@ drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 23 03:21 ncbi_dataset
 drwxr-xr-x 30 caichoj g-caichoj     4096 Sep 17 16:50 ncbi.dataset.tsv
 drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:33 new_genomes
 -rw-------  1 caichoj g-caichoj     1593 Sep 22 19:22 README.md
+```
 
 
-# Questions 2
+# Questions 3
+### What is the smallest and what is the largest genome
 
-Code:
+Command 
+``` bash
 find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'echo "$(tail -n +2 "$1" | wc -c) $(basename "$1")"' _ {} \; | sort -n | tail -n 1 | awk '{print "Largest genome is in file \"" $2 "\": " $1}'
+```
 
 Output:
 
-# Questions 3
+# Questions 4
+### Find the number of genomes that contain at least two “c”
 
+Output:
+
+
+# Question 5 
+### Use find command to find all genome files (FASTA) largerthan 3 megabyte.
+
+Output:
