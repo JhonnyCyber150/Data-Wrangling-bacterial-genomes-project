@@ -116,8 +116,8 @@ drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:33 new_genomes
 ```
 
 
-# Questions 3
-### What is the smallest and what is the largest genome
+# Question 3
+### P1. What is the largest genome
 
 Command 
 ``` bash
@@ -126,13 +126,40 @@ find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'echo "$(
 
 Output:
 
-# Questions 4
-### Find the number of genomes that contain at least two “c”
+Largest genome is in file "GCF_000006745.1_ASM674v1_genomic.fna": 4083974
+
+### P1. What is the smallest genome
+
+Command 
+
+``` bash
+find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'echo "$(tail -n +2 "$1" | wc -c) $(basename "$1")"' _ {} \; | sort -n | head -n 1 | awk '{print "Smallest genome is in \"" $2 "\": " $1}'
+```
 
 Output:
 
+Smallest genome is in "GCA_000008725.1_ASM872v1_genomic.fna": 1055551
+
+# Question 4
+
+### P1. Number of Genomes that contain at least two "C" in the name 
+```bash 
+find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
+```
+    OUTPUT: 14
+
+### P2. Number of Genomes that contain two or more “c” but do not contain the word “coccus”
+
+```bash
+find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | grep -v "coccus" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
+```
+    OUTPUT: 4
 
 # Question 5 
 ### Use find command to find all genome files (FASTA) largerthan 3 megabyte.
 
-Output:
+```bash
+find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -size +3M | wc -l
+```
+    OUTPUT: 4
+
