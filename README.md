@@ -5,13 +5,13 @@ To downloads the file go to the website https://www.ncbi.nlm.nih.gov/datasets/
 
 ### Follow the steps
 
-Select genomes 
-Click bacteria and there are about 2.1 millions 
-Click total
-Set columns and choose (GC percentage, Contig N50,
-Scaffold count, genome size)
-Sort the date and select the 14 genomes release up to 2001
-Download 
+1. Select genomes 
+2. Click bacteria and there are about 2.1 millions 
+3. Click total
+4. Set columns and choose (GC percentage, Contig N50,
+5. Scaffold count, genome size)
+6. Sort the date and select the 14 genomes release up to 2001
+7. Download
 #### downlad package (~18 mb)
 
 ## Create a README.md file
@@ -19,16 +19,22 @@ Go to link https://github.com/ and create an acount  and an repository
 
 # Question 2
 ## Copy the files to your home directory on IBEX and uncompress
+
+### To copy to my home directory 
+
+``` bash 
 scp C:\Users\USUARIO\Downloads\bacterial_dataset.zip caichoj@ilogin.ibex.kaust.edu.sa:~/  
+```
+Enter the password 
 
-I should enter the passowrd and it was copied
+The file has been copied
 
-SMS output 
+``` bash 
 bacterial_dataset.zip                                                                 100%   16MB   5.1MB/s   00:03
-
+```
 
 To verify the upload to the ibex
-
+```bash 
 after put ls -l
 total 26320
 -rw-r--r--  1 caichoj g-caichoj 16768029 Sep 23 03:14 bacterial_dataset.zip
@@ -40,11 +46,18 @@ drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:12 genomes
 -rw-r--r--  1 caichoj g-caichoj      229 Sep 22 12:26 gpu_ibex.slurm
 drwxr-xr-x 30 caichoj g-caichoj     4096 Sep 17 16:50 ncbi.dataset.tsv
 drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:33 new_genomes
+```
+Notice bacterial_dataset.zip has been added 
 
-##To unzip
+### To unzip
+```bash 
 [caichoj@login509-02-r ~]$ unzip bacterial_dataset.zip
+```
 
-Output 
+SMS during the 
+
+```bash 
+
 
 Archive:  bacterial_dataset.zip
   inflating: README.md
