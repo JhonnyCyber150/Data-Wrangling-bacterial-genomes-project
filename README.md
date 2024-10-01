@@ -141,5 +141,5 @@ find /home/caichoj/ncbi_dataset/data/GCA* -type f -name "*.fna" -exec sh -c 'gre
 ```bash
 find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -size +3M | wc -l
 ```
-    OUTPUT: 4
+    OUTPUT: 6
 
