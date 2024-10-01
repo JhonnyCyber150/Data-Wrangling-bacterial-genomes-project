@@ -130,7 +130,8 @@ find /home/caichoj/ncbi_dataset/data/GCA* -type f -name "*.fna" -exec sh -c 'gre
 ### P2. Number of Genomes that contain two or more “c” but do not contain the word “coccus”
 
 ```bash
-find /home/caichoj/ncbi_dataset/data/GCA* -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | grep -v "coccus" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
+ grep -E 'GCA' /home/caichoj/ncbi_dataset/data/data_summary.tsv | grep -E 'c.*c' | grep -v 'coccus' | wc -l
+
 ```
     OUTPUT: 5
 
