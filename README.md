@@ -1,3 +1,4 @@
+--- 
 # Data Wrangling - Bacterial-genomes-project
 
 
@@ -11,12 +12,13 @@ To downloads the file go to the website https://www.ncbi.nlm.nih.gov/datasets/
 4. Set columns and choose (GC percentage, Contig N50,Scaffold count, genome size)
 6. Sort by date and select the 14 genomes release up to 2001
 7. Download
-#### downlad package (~18 mb)
+#### Downlad package (~18 mb)
 
 ## Create a README.md file
 1. Go to link https://github.com/ 
 2. Create an acount and new repository 
 
+--- 
 # Question 2
 ## Copy the files to your home directory on IBEX and uncompress
 
@@ -112,7 +114,7 @@ drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:33 new_genomes
 -rw-------  1 caichoj g-caichoj     1593 Sep 22 19:22 README.md
 ```
 
-
+--- 
 # Question 3
 ### P1. What is the largest genome
 
@@ -134,8 +136,9 @@ find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'echo "$(
 ```
 **OUTOUT:**
 
-Smallest genome is in "GCA_000008725.1_ASM872v1_genomic.fna": 1055551
+Smallest genome is in **"GCA_000008725.1_ASM872v1_genomic.fna": 1055551**
 
+--- 
 # Question 4
 
 ### P1. Number of Genomes that contain at least two "C" in the name 
@@ -151,6 +154,7 @@ find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'grep -E 
 ```
     OUTPUT: 4
 
+--- 
 # Question 5 
 ### Use find command to find all genome files (FASTA) largerthan 3 megabyte.
 
