@@ -25,11 +25,9 @@ To downloads the file go to the website https://www.ncbi.nlm.nih.gov/datasets/
 ``` bash 
 scp C:\Users\USUARIO\Downloads\bacterial_dataset.zip caichoj@ilogin.ibex.kaust.edu.sa:~/  
 ```
-Enter the password 
+Enter the password  and the file has been copied
 
-The file has been copied
-
-``` bash 
+```bash 
 bacterial_dataset.zip                                                                 100%   16MB   5.1MB/s   00:03
 ```
 
@@ -47,7 +45,7 @@ drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:12 genomes
 drwxr-xr-x 30 caichoj g-caichoj     4096 Sep 17 16:50 ncbi.dataset.tsv
 drwxr-xr-x  3 caichoj g-caichoj     4096 Sep 22 15:33 new_genomes
 ```
-Notice bacterial_dataset.zip has been added 
+Notice **bacterial_dataset.zip** has been added 
 
 ### To unzip
 ```bash 
@@ -96,9 +94,8 @@ Archive:  bacterial_dataset.zip
 
 ```
 
-ls -l
-
-appear new files in my home directory like ncbi_dataset and README.md, md5sum.text
+Command `ls -l` and check it.  
+New files in my home directory **ncbi_dataset** and **README.md**, **md5sum.text** appear
 
 ```bash 
 rw-r--r--  1 caichoj g-caichoj 16768029 Sep 23 03:14 bacterial_dataset.zip
@@ -124,9 +121,9 @@ Command
 find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'echo "$(tail -n +2 "$1" | wc -c) $(basename "$1")"' _ {} \; | sort -n | tail -n 1 | awk '{print "Largest genome is in file \"" $2 "\": " $1}'
 ```
 
-Output:
+**OUTPUT:**
 
-Largest genome is in file "GCF_000006745.1_ASM674v1_genomic.fna": 4083974
+Largest genome is in file **"GCF_000006745.1_ASM674v1_genomic.fna": 4083974**
 
 ### P1. What is the smallest genome
 
@@ -135,8 +132,7 @@ Command
 ``` bash
 find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'echo "$(tail -n +2 "$1" | wc -c) $(basename "$1")"' _ {} \; | sort -n | head -n 1 | awk '{print "Smallest genome is in \"" $2 "\": " $1}'
 ```
-
-Output:
+**OUTOUT:**
 
 Smallest genome is in "GCA_000008725.1_ASM872v1_genomic.fna": 1055551
 
