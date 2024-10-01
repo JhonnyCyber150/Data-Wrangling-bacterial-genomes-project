@@ -123,16 +123,16 @@ Smallest genome is in **"GCA_000008725.1_ASM872v1_genomic.fna": 1055551**
 
 ### P1. Number of Genomes that contain at least two "C" in the name 
 ```bash 
-find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
+find /home/caichoj/ncbi_dataset/data/GCA* -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
 ```
-    OUTPUT: 14
+    OUTPUT: 7
 
 ### P2. Number of Genomes that contain two or more “c” but do not contain the word “coccus”
 
 ```bash
-find /home/caichoj/ncbi_dataset/data -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | grep -v "coccus" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
+find /home/caichoj/ncbi_dataset/data/GCA* -type f -name "*.fna" -exec sh -c 'grep -E "^>" "$1" | awk -F " " "{print \$2}" | grep -E "c.*c" | grep -v "coccus" | wc -l' _ {} \; | awk '{total += $1} END {print total}'
 ```
-    OUTPUT: 4
+    OUTPUT: 2
 
 --- 
 # Question 5 
